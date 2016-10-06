@@ -31,6 +31,13 @@
 		$aSte = "geen enkele";
 	}
 	$fruit = strtoupper($fruit);
+	
+	// deel 3
+	$lettertje = "e";
+	$cijfertje = "3";
+	$langsteWoord = "zandzeepsodemineralenwatersteenstralen";
+	$langsteWoord = str_ireplace($lettertje, $cijfertje, $langsteWoord);
+	
 ?>
 
 <!DOCTYPE html>
@@ -48,6 +55,6 @@
 		<h2>Deel 2</h2>
 		<p>De laatste 'a' in <?= $fruit?> bevindt zich op <?= $aSte?> plaats</p>
 		<h2>Deel 3</h2>
-		<p></p>
+		<p>Dit is h<?= $lettertje?>t r<?= $lettertje?>sultaat: <?= $langsteWoord?></p>
 	</body>
 </html>
