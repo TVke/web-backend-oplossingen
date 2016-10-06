@@ -12,6 +12,6 @@
 		<title>oplossing comments</title>
 	</head>
 	<body>
-		<?php echo"Thomas Verhelst";?>
+		<p><?= "Thomas Verhelst"?></p>
 	</body>
 </html>
