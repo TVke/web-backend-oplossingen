@@ -1,0 +1,16 @@
+table{
+	line-spacing:0;
+	border-collapse: collapse;
+	border-top: 1px solid lightGray;
+	border-right: 1px solid lightGray;
+	margin: 10px;
+}
+table td{
+	border-left: 1px solid lightGray;
+	border-bottom: 1px solid lightGray;
+	text-align: center;
+	padding: 10px;
+}
+td.even{
+	background: greenYellow;
+}
