@@ -45,7 +45,7 @@
 		$tweedeTien=100;
 	}
 	$volledigeZin="Het getal ".$getal." ligt tussen ".$eersteTien." en ".$tweedeTien;
-	$omgekeerdeZin=$volledigeZin;
+	$omgekeerdeZin=strrev($volledigeZin);
 	
 ?>
 
