@@ -16,12 +16,12 @@
 		
 	// deel 2
 	$sec=221108521;
-	$minuten=$sec/60;
-	$uren=$minuten/60;
-	$dagen=$uren/24;
-	$weken=$dagen/7;
-	$maanden=$dagen/31;
-	$jaren=$dagen/365;
+	$minuten=intval($sec/60);
+	$uren=intval($minuten/60);
+	$dagen=intval($uren/24);
+	$weken=intval($dagen/7);
+	$maanden=intval($dagen/31);
+	$jaren=intval($dagen/365);
 	
 ?>
 
