@@ -16,7 +16,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>GET</title>
+		<title>GET<?php if($showOne){echo" - ".$articles[$_GET['id']]["titel"];}?></title>
 		<link href="stijl.css" rel="stylesheet" type="text/css">
 	</head>
 	<body>
