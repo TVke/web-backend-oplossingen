@@ -5,19 +5,16 @@
 	$renteProcent=8;
 	$jaarSparen=10;
 	
-	function plusRenteOpJaarbasis($start,$rente,$jaar){
-		static $jaren=0;
+	function plusRenteOpJaarbasis($start,$rente,$jaar,$jaren=0){
 		if($jaren<$jaar){
 			$start+=$start*$rente/100;
-			return plusRenteOpJaarbasis($start,$rente,$jaar);
+			++$jaren;
+			return plusRenteOpJaarbasis($start,$rente,$jaar,$jaren);
 		}
 		else{
 			return $start;
 		}
-		$jaren++;
 	}
-	
-	// deel 2
 	
 ?>
 
@@ -30,7 +27,5 @@
 		<h1>functions recursive</h1>
 		<h2>deel 1</h2>
 		<p>Het bedrag €<?= $startBedrag?> met een rente van <?= $renteProcent?>% word na <?= $jaarSparen?> jaar €<?= plusRenteOpJaarbasis($startBedrag,$renteProcent,$jaarSparen)?></p>
-		<h2>deel 2</h2>
-		<p></p>
 	</body>
 </html>
