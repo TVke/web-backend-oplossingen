@@ -23,24 +23,18 @@
 		<h1>GET</h1>
 		<h3>K<s>ran</s>dG</h3>
 		<main>
-			<div class="overlay<?php if($showOne)echo" showOne";?>">
-				<?php if($showOne):?>
-				<h4><?= $articles[$_GET['id']]['titel']?></h4>
-				<img src="<?= $articles[$_GET['id']]['afbeelding']?>" alt="<?= $articles[$_GET['id']]['beschrijvingAfbeelding']?>">
-				<p><?= $articles[$_GET['id']]['paragraaf']?></p>
-				<?php endif?>
-			</div>
 			<?php foreach($articles as $id => $article):?>
-			<article id="<?php echo $id;?>">
+			<article id="<?php echo $id;?>"<?php if($showOne&&$_GET['id']==$id){echo"class='showOne'";}?>>
 				<h4><?php echo $article["titel"];?></h4>
 				<img src="<?php echo $article["afbeelding"];?>" alt="<?php echo $article["beschrijvingAfbeelding"];?>">
-				<p><?php echo substr($article["paragraaf"],0,50);?>...</p>
+				<p class="short"><?= substr($article["paragraaf"],0,50)."...";?></p>
+				<p class="long"><?= $article["paragraaf"];?></p>
 				<a href="index.php?id=<?php echo $id;?>">lees meer</a>
 			</article>
 			<?php endforeach?>
 		</main>
 		<script type="text/javascript">
-			document.getElementsByClassName('overlay')[0].addEventListener("click",function(){document.getElementsByClassName('overlay')[0].classList.remove('showOne');});
+			document.getElementsByTagName('main')[0].addEventListener("click",function(){document.getElementById(<?php if($showOne){echo $_GET['id'];}?>).classList.remove('showOne');});
 		</script>
 	</body>
 </html>
