@@ -9,7 +9,7 @@
 		static $jaren=0;
 		if($jaren<$jaar){
 			$start+=$start*$rente/100;
-// 			plusRenteOpJaarbasis($start,$rente,$jaar);
+			return plusRenteOpJaarbasis($start,$rente,$jaar);
 		}
 		else{
 			return $start;
