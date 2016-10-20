@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b4075913-d882-4dbf-9f30-660503e91482" name="Default" comment="initial files of summary task 1">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/oplossingen.iml" afterPath="$PROJECT_DIR$/.idea/oplossingen.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oplossing-date/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oplossing-herhalingsopdracht-01/index.php" afterPath="$PROJECT_DIR$/oplossing-herhalingsopdracht-01/index.php" />
     </list>
     <list id="8228a0df-d009-430d-9ec1-0f5bdcbedccb" name="Rejected commit: Default" comment="initial files of summary task 1" />
     <ignored path="oplossingen.iws" />
@@ -40,11 +38,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/oplossing-herhalingsopdracht-01/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="60" selection-start-line="29" selection-start-column="60" selection-end-line="29" selection-end-column="60" />
+            <state relative-caret-position="478">
+              <caret line="96" column="7" selection-start-line="46" selection-start-column="0" selection-end-line="96" selection-end-column="7" />
               <folding>
                 <marker date="1476976437000" expanded="true" signature="971:1035" ph="..." />
                 <marker date="1476976437000" expanded="true" signature="971:1577" ph="..." />
@@ -55,6 +53,16 @@
                 <marker date="1476976437000" expanded="true" signature="1770:2022" ph="..." />
                 <marker date="1476976437000" expanded="true" signature="2070:2315" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/oplossing-date/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -77,6 +85,7 @@
         <option value="$PROJECT_DIR$/oplossing-herhalingsopdracht-01/stijl.css" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/oplossing-herhalingsopdracht-01/index.php" />
+        <option value="$PROJECT_DIR$/oplossing-date/index.php" />
       </list>
     </option>
   </component>
@@ -178,7 +187,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="oplossing-herhalingsopdracht-01" />
+              <option name="myItemId" value="oplossing-date" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -283,7 +292,7 @@
       <workItem from="1476914559605" duration="98000" />
       <workItem from="1476919741928" duration="6000" />
       <workItem from="1476923501022" duration="34000" />
-      <workItem from="1476966602537" duration="7518000" />
+      <workItem from="1476966602537" duration="7875000" />
     </task>
     <task id="LOCAL-00001" summary="initial files of summary task 1">
       <created>1476899047241</created>
@@ -296,7 +305,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18252000" />
+    <option name="totallyTimeSpent" value="18609000" />
   </component>
   <component name="TodoView">
     <todo-panel id="all">
@@ -308,14 +317,14 @@
     <frame x="0" y="0" width="718" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24533716" sideWeight="0.49371633" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24533716" sideWeight="0.49371633" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.32891566" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.32891566" sideWeight="0.50739646" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="false" weight="0.32988167" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.32650602" sideWeight="0.49722221" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32711622" sideWeight="0.49260354" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32692307" sideWeight="0.49260354" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.23964497" sideWeight="0.50628364" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.30963856" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -407,8 +416,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/oplossing-herhalingsopdracht-01/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="60" selection-start-line="29" selection-start-column="60" selection-end-line="29" selection-end-column="60" />
+        <state relative-caret-position="478">
+          <caret line="96" column="7" selection-start-line="46" selection-start-column="0" selection-end-line="96" selection-end-column="7" />
           <folding>
             <marker date="1476976437000" expanded="true" signature="971:1035" ph="..." />
             <marker date="1476976437000" expanded="true" signature="971:1577" ph="..." />
@@ -419,6 +428,14 @@
             <marker date="1476976437000" expanded="true" signature="1770:2022" ph="..." />
             <marker date="1476976437000" expanded="true" signature="2070:2315" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oplossing-date/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
