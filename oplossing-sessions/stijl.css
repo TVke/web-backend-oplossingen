@@ -1,0 +1,20 @@
+*,html{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-family: Helvetica,Arial,sans-serif;
+}
+h1,h2,h3{
+	padding: 10px 20px;
+}
+h1 {
+	border-bottom: 1px solid gray;
+}
+form{
+	margin: 20px;
+}
+form *{
+	display: block;
+	margin: 10px 0;
+}
