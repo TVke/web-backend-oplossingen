@@ -4,19 +4,21 @@ $userarray = explode(",",$user);
 $fouutmelding=false;
 $ingelogd=false;
 
-if(isset($_COOKIE['ingelogd'])&&$_COOKIE['ingelogd']==="correct"){
-	$ingelogd=true;
+if(isset($_COOKIE['ingelogd'])&&$_COOKIE['ingelogd']==="correct") {
+	$ingelogd = true;
 }
 
 if(isset($_POST['login'])) {
 	if ($_POST['username'] === $userarray[0] && $_POST['password'] === $userarray[1]) {
-		setcookie("ingelogd","correct",time()+360);
+		setcookie("ingelogd", "correct", time() + 360);
+		header("Location: index.php");
 	} else {
 		$fouutmelding = true;
 	}
 }
-if(isset($_GET['uitloggen'])){
-	unset($_COOKIE['ingelogd']);
+
+if(isset($_GET['uitloggen'])) {
+	setcookie('ingelogd', false);
 }
 
 ?>
@@ -34,7 +36,7 @@ if(isset($_GET['uitloggen'])){
 <?php if($ingelogd):?>
 	<h3>Dashboard</h3>
 	<p>U bent ingelogd.</p>
-	<a href="index.php?uitloggen">Uitloggen</a>
+	<a href="index.php?uitloggen=ok">Uitloggen</a>
 <?php else:?>
 <h3>Inloggen</h3>
 <?php if($fouutmelding):?>
