@@ -45,6 +45,22 @@ article a{
 article a:hover{
 	color: gray;
 }
+table{
+	border-spacing: 0;
+	margin: 10px 100px;
+	text-align: center;
+}
+table td{
+	border-bottom: 1px solid gray;
+	border-right: 1px solid gray;
+	padding: 5px 10px;
+}
+table tr:last-child td{
+	border-bottom:none;
+}
+table td:last-child{
+	border-right:none;
+}
 footer{
 	width: 100%;
 	display: block;
