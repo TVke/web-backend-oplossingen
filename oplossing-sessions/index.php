@@ -1,19 +1,20 @@
-<?php
+<?php session_start();
 
-if(isset($_GET['id'])) {
-	if($_GET['id']=="mail"){
+$email = "";
+$nick = "";
+$mailactief="";
+$nickactief="";
+
+if(isset($_GET['edit'])) {
+
+	if($_GET['edit']=="mail"){
 		$mailactief="autofocus";
 	}
-	else if($_GET['id']=="nick"){
+	else if($_GET['edit']=="nick"){
 		$nickactief="autofocus";
 	}
 	$email = $_SESSION['email'];
 	$nick = $_SESSION['nick'];
-}else {
-	$email = "";
-	$nick = "";
-	$mailactief="";
-	$nickactief="";
 }
 
 ?>

@@ -1,35 +1,35 @@
 <?php session_start();
 
+$street = "";
+$number = "";
+$place = "";
+$area = "";
+$streetactief = "";
+$numberactief = "";
+$placeactief = "";
+$areaactief = "";
+
 if(isset($_POST['send'])) {
 	$_SESSION['email'] = $_POST['user'];
 	$_SESSION['nick'] = $_POST['pass'];
 }
-if(isset($_GET['id'])) {
-	if($_GET['id']=="street"){
+if(isset($_GET['edit'])) {
+	if($_GET['edit']=="street"){
 		$streetactief="autofocus";
 	}
-	else if($_GET['id']=="number"){
+	else if($_GET['edit']=="number"){
 		$numberactief="autofocus";
 	}
-	else if($_GET['id']=="place"){
+	else if($_GET['edit']=="place"){
 		$placeactief="autofocus";
 	}
-	else if($_GET['id']=="area"){
+	else if($_GET['edit']=="area"){
 		$areaactief="autofocus";
 	}
 	$street = $_SESSION['street'];
 	$number = $_SESSION['number'];
 	$place = $_SESSION['city'];
 	$area = $_SESSION['area'];
-}else {
-	$street = "";
-	$number = "";
-	$place = "";
-	$area = "";
-	$streetactief = "";
-	$numberactief = "";
-	$placeactief = "";
-	$areaactief = "";
 }
 
 ?>
