@@ -1,0 +1,13 @@
+<h3>Nieuws</h3>
+<main>
+<?php foreach ($artikels as $artikel):?>
+	<article>
+		<h4><?= $artikel['titel']?></h4>
+		<p><?= $artikel['text']?></p>
+		<span>Kernwoorden: </span>
+		<?php foreach ($artikel['tags'] as $tag):?>
+			<a href=""><?= $tag?></a>
+		<?php endforeach;?>
+	</article>
+<?php endforeach;?>
+</main>
