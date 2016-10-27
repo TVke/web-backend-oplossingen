@@ -1,3 +1,4 @@
+/* basic style */
 *,html{
 	margin: 0;
 	padding: 0;
@@ -13,39 +14,9 @@ h1{
 	background: whitesmoke;
 	box-shadow: 0 0 3px gray;
 }
-header{
-	background: black;
-	margin-top: 5px;
-}
-header *{
-	color: white;
-}
-h2{
-	display: block;
-	float: left;
-}
-h2 span{
-	color: darkgray;
-	position: relative;
-	right: 10px;
-}
-nav{
-	display: block;
-	float: right;
-	padding: 15px 20px;
-}
-nav a{
-	text-decoration: none;
-	padding: 0 10px;
-}
-nav a:hover {
-	color: lightgray;
-}
-header::after{
-	content: "";
-	display: block;
-	clear: both;
-}
+
+
+/* basic content style */
 h3{
 	width: 80%;
 	margin: 0 auto 20px;
@@ -54,13 +25,7 @@ h3{
 	font-weight: normal;
 	font-size: 1.5em;
 }
-
-main{
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-}
-main article{
+article{
 	max-width:500px;
 	width: 25%;
 	padding: 10px;
@@ -68,25 +33,18 @@ main article{
 	border: 1px solid gray;
 	border-radius: 3px;
 }
-main article h4{
+article h4{
 	border-bottom: 1px solid gray;
 	margin-bottom: 5px;
 	padding-bottom: 2px;
 }
-main article a{
+article a{
 	text-decoration: none;
 	color: orange;
 }
-main article a::after{
-	content: ", ";
-}
-main article a:last-child::after{
-	content: "";
-}
-main article a:hover{
+article a:hover{
 	color: gray;
 }
-
 footer{
 	width: 100%;
 	display: block;
