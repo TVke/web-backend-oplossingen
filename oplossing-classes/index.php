@@ -1,9 +1,8 @@
 <?php $titel="Classes";
 
-function loadClasses(){
+spl_autoload_register(function(){
 	include("classes/Percent.php");
-}
-spl_autoload_register('loadClasses');
+});
 
 $firstNumber=150;
 $secondNumber=100;
