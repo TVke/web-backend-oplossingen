@@ -11,7 +11,8 @@ h1,h2,h3{
 }
 h1{
 	border-bottom: 1px solid gray;
-	background: whitesmoke;
+	background: #1E1E1E;
+	color: whitesmoke;
 	box-shadow: 0 0 3px gray;
 	position: -webkit-sticky;
 	top:0;
@@ -19,6 +20,11 @@ h1{
 
 
 /* basic content style */
+main{
+	display: block;
+	width: 80%;
+	margin: 0 auto 20px;
+}
 h3{
 	width: 80%;
 	margin: 0 auto 20px;
@@ -71,4 +77,20 @@ footer{
 	color:white;
 	text-align:center;
 	margin-top: 20px;
+}
+ul{
+	list-style: none;
+}
+li a{
+	display: block;
+	text-decoration: none;
+	color: gray;
+	padding: 5px 10px;
+}
+li a:hover{
+	color: black;
+	background: whitesmoke;
+	padding:4px 10px;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
 }
