@@ -1,5 +1,6 @@
-<?php $titel="Web-backend";
-
+<?php
+$titel="Web-backend";
+$ownStyle="oplossingen.css";
 
 $lijst = [];
 $linkLijst = [];

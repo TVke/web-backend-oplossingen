@@ -1,0 +1,20 @@
+li:first-child::before{
+	content: "Laatste Nieuwe oefening";
+	width: 100%;
+	display: block;
+	border-bottom: 1px solid gray;
+	padding-bottom: 3px;
+}
+
+li:first-child a{
+	margin: 10px 0 20px;
+}
+
+li:first-child::after{
+	content: "Oudere oefeningen";
+	width: 100%;
+	display: block;
+	border-bottom: 1px solid gray;
+	margin-bottom: 10px;
+	padding-bottom: 3px;
+}

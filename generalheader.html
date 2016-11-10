@@ -4,6 +4,9 @@
 	<meta charset="UTF-8">
 	<title><?= $titel?></title>
 	<link rel="stylesheet" href="../general.css" type="text/css">
+	<?php if(isset($ownStyle)):?>
+	<link rel="stylesheet" href="<?= $ownStyle?>" type="text/css">
+	<?php endif;?>
 </head>
 <body>
 <h1><?= $titel?></h1>
