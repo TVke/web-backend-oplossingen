@@ -33,7 +33,9 @@ class Animals
 	{
 		$this->health += $healthPoints;
 	}
-	public function doSpecialMove(){
+
+	public function doSpecialMove()
+	{
 		return "walk";
 	}
 
