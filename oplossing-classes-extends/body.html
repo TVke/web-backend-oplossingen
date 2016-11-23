@@ -1,0 +1,18 @@
+<h2>Dieren</h2>
+<main>
+<?php for($i=0,$ilen=count($dieren);$i<$ilen;++$i):?>
+	<p><?= $dieren[$i]->getName() ?> is van het geslacht <?= $dieren[$i]->getGender() ?> en heeft momenteel <?= $dieren[$i]->getHealth()?> levenspunten (special move: <?= $dieren[$i]->doSpecialMove()?>)</p>
+<?php endfor;?>
+</main>
+<h2>Leeuwen</h2>
+<main>
+	<?php for($i=0,$ilen=count($leeuwen);$i<$ilen;++$i):?>
+	<p>De speciale move van <?= $leeuwen[$i]->getName() ?> (soort: <?= $leeuwen[$i]->getSpecies() ?>): <?= $leeuwen[$i]->doSpecialMove()?></p>
+	<?php endfor;?>
+</main>
+<h2>Zebras</h2>
+<main>
+	<?php for($i=0,$ilen=count($zebras);$i<$ilen;++$i):?>
+	<p>De speciale move van <?= $zebras[$i]->getName() ?> (soort: <?= $zebras[$i]->getSpecies() ?>): <?= $zebras[$i]->doSpecialMove()?></p>
+	<?php endfor;?>
+</main>
