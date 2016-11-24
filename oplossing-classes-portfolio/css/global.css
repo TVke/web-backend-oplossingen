@@ -1,0 +1,25 @@
+header{
+	margin: 10px;
+	display: flex;
+	justify-content: space-between;
+	background: olive;
+	border-radius: 3px;
+}
+header h2{
+	background: none;
+}
+header *{
+	color: whitesmoke;
+}
+header nav{
+	line-height: 300%;
+	margin-right:5px;
+}
+header nav a{
+	padding: 15px;
+	text-decoration: none;
+	border-left: 1px solid black;
+}
+header nav a:hover{
+	color: black;
+}
