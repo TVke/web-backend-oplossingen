@@ -4,9 +4,9 @@
 	<meta charset="UTF-8">
 	<title><?= $titel?></title>
 	<link rel="stylesheet" href="../general.css" type="text/css">
-	<?php if(isset($ownStyle)):?>
-	<link rel="stylesheet" href="<?= $ownStyle?>" type="text/css">
-	<?php endif;?>
-<link rel='stylesheet' href='css/global.css' type='text/css'><link rel='stylesheet' href='css/global.css' type='text/css'><link rel='stylesheet' href='css/global.css' type='text/css'></head>
+	<?php for($i=0,$ilen=count($styles);$i<$ilen;++$i):?>
+	<link rel="stylesheet" href="<?= $styles[$i]?>" type="text/css">
+	<?php endfor;?>
+</head>
 <body>
 <h1><?= $titel?></h1>
