@@ -3,7 +3,7 @@
 	margin: 0;
 	padding: 0;
 }
-body{
+body,input{
 	font-family: Helvetica,Arial,sans-serif;
 }
 h1,h2,h3{
@@ -53,6 +53,8 @@ article a{
 article a:hover{
 	color: gray;
 }
+
+/* tables */
 table{
 	border-spacing: 0;
 	margin: 10px 0;
@@ -96,4 +98,17 @@ li a:hover{
 	padding:4px 10px;
 	border-top: 1px solid black;
 	border-bottom: 1px solid black;
+}
+
+/* forms */
+label,input{
+	display: block;
+}
+label{
+	margin-top: 10px;
+}
+input{
+	margin-bottom: 10px;
+	font-size: 0.8em;
+	padding: 5px 7px;
 }
