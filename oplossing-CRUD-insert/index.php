@@ -3,7 +3,6 @@ try {
 	$db = new pdo('mysql:host=localhost;dbname=bieren', 'root', 'root');
 	if ($db) {
 		if(isset($_POST['submit'])) {
-			//var_dump("INSERT INTO brouwers VALUES (NULL,".$_POST['brnaam'].",".$_POST['adres'].",".$_POST['postcode'].",".$_POST['gemeente'].",".$_POST['omzet'].")");
 			$newBrewer = $db->prepare("INSERT INTO brouwers VALUES (NULL,:brnaam,:adres,:postcode,:gemeente,:omzet)");
 			$newBrewer->bindParam(':brnaam',$_POST['brnaam']);
 			$newBrewer->bindParam(':adres',$_POST['adres']);
