@@ -1,0 +1,45 @@
+input[type=image]{
+	padding: 0;
+	margin: 0;
+	width: 20px;
+	background: white;
+	border-radius: 50%;
+}
+input[type=image].edit{
+	border-radius: 0;
+}
+form,table{
+	width: 100%;
+}
+span{
+	display: block;
+	background: rgb(255, 209, 211);
+	border: 1px solid red;
+	border-radius: 3px;
+	padding: 10px 15px;
+}
+input[type=submit]{
+	float: left;
+	margin: 0;
+}
+form span::after{
+	content: "";
+	clear: both;
+	display: block;
+}
+.selected{
+	background: rgb(255, 209, 211);
+}
+thead td a{
+	color: #000;
+	display: -webkit-flex;
+	display: flex;
+	justify-content: center;
+}
+thead td a img{
+	width: 10px;
+	margin-left: 7px;
+}
+.desc{
+	transform: rotateX(180deg);
+}
