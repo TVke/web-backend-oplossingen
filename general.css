@@ -17,6 +17,14 @@ h1{
 	position: -webkit-sticky;
 	top:0;
 }
+h1 a{
+	color: white;
+	text-decoration: none;
+}
+h1 a img{
+	transform: rotateY(180deg);
+	padding-left: 10px;
+}
 
 
 /* basic content style */

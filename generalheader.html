@@ -9,4 +9,4 @@
 	<?php endif;?>
 </head>
 <body>
-<h1><?= $titel?></h1>
+<h1><?php if(!isset($list)):><a href="/"><img src="/arrow.svg" alt="terug"></a><?php endif;?><a href="."><?= $titel?></a></h1>
