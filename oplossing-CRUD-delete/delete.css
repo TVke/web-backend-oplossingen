@@ -10,7 +10,7 @@ form,table{
 }
 span{
 	display: block;
-	background: rgb(255, 209, 211);
+	background: #FFD1D3;
 	border: 1px solid red;
 	border-radius: 3px;
 	padding: 10px 15px;

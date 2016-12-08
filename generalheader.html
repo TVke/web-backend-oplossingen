@@ -3,10 +3,10 @@
 <head>
 	<meta charset="UTF-8">
 	<title><?= $titel?></title>
-	<link rel="stylesheet" href="../general.css" type="text/css">
+	<link rel="stylesheet" href="/general.css" type="text/css">
 	<?php if(isset($ownStyle)):?>
 	<link rel="stylesheet" href="<?= $ownStyle?>" type="text/css">
 	<?php endif;?>
 </head>
 <body>
-<h1><?php if(!isset($list)):><a href="/"><img src="/arrow.svg" alt="terug"></a><?php endif;?><a href="."><?= $titel?></a></h1>
+<h1><?php if(!isset($list)):?><a href="/"><img src="/arrow.svg" alt="terug"></a><?php endif;?><a href="."><?= $titel?></a></h1>

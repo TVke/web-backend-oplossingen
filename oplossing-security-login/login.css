@@ -1,0 +1,26 @@
+#pass{
+	float: left;
+	margin-right: 10px;
+}
+input[type=submit]{
+	display: block;
+	margin: 5px 10px;
+}
+input[type=submit]:last-of-type{
+	clear: both;
+	margin: inherit;
+}
+span{
+	display: block;
+	background: #FFD1D3;
+	border: 1px solid red;
+	border-radius: 3px;
+	padding: 10px 15px;
+}
+.wrong{
+	border: 1px solid red;
+	background: #FFD1D3;
+}
+p{
+	padding-top: 20px;
+}
