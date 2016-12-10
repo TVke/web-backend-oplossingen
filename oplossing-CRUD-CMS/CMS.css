@@ -1,0 +1,91 @@
+#pass{
+	float: left;
+	margin-right: 10px;
+}
+input[type=submit]{
+	display: block;
+	margin: 5px 10px;
+}
+input[type=submit]:last-of-type{
+	clear: both;
+	margin: inherit;
+}
+span{
+	display: block;
+	background: #FFD1D3;
+	border: 1px solid red;
+	border-radius: 3px;
+	padding: 10px 15px;
+}
+.wrong{
+	border: 1px solid red;
+	background: #FFD1D3;
+}
+p{
+	padding-top: 20px;
+}
+nav{
+	display: -webkit-flex;
+	display: flex;
+	padding: 10px;
+	justify-content: flex-end;
+}
+nav.article a:first-child{
+	padding-right: 5px;
+}
+nav p{
+	padding: 0;
+}
+nav p::after{
+	content: "|";
+	padding:0 5px;
+}
+nav p::before{
+	content: "|";
+	padding:0 5px;
+}
+nav.start p::before{
+	 content: "";
+	 padding:0;
+ }
+main ul{
+	list-style-type: circle;
+	padding-left: 25px;
+}
+main ul li a{
+	padding: 0;
+	margin: 0;
+	text-decoration: underline;
+	color: -webkit-link;
+	border: initial;
+	background: initial;
+}
+main ul li a:hover{
+	padding: 0;
+	margin: 0;
+	text-decoration: initial;
+	color: -webkit-link;
+	border: initial;
+	background: initial;
+}
+textarea{
+	width: 100%;
+	height: 200px;
+}
+article{
+	width: 100%;
+	margin: 10px auto;
+}
+article a{
+	color: black;
+	text-decoration: underline;
+}
+article a:hover{
+	text-decoration: none;
+}
+.active{
+	background: whitesmoke;
+}
+.non-active{
+	background: gainsboro;
+}
