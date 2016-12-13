@@ -28,8 +28,6 @@ if(isset($_COOKIE['login'])){
 	header("Location: ../../login/");
 }
 
-
-
 require("../../../generalheader.html");
 require("body.php");
 require("../../../generalfooter.html");

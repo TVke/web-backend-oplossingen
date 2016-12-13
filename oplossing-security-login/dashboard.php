@@ -11,6 +11,8 @@ if(isset($_COOKIE['login'])){
 			if($mailHash === $cookiePart[1]){
 				$logOut="uitloggen";
 			}else{
+				setcookie('login', "", 1,"/");
+				setcookie('login', false);
 				unset($_COOKIE['login']);
 				$_SESSION['notify'] = ['login','Er werd geknoeid. Probeer opnieuw. '];
 				header("Location: login.php");

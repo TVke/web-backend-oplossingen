@@ -18,7 +18,7 @@ if(isset($_POST['register'])) {
 					$newUser->bindParam(':salt',$salt);
 					$newUser->bindParam(':hash',$pass);
 					if($newUser->execute()){
-						setcookie("login",$_SESSION['email'].",".$mailHash,time()+60*60*24*30);
+						setcookie("login",$_SESSION['email'].",".$mailHash,time()+60*60*24*30,"/");
 						header("Location: dashboard.php");
 					}else{
 						throw new Exception('het toevoegen. Probeer opnieuw. ');

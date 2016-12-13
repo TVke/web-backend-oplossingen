@@ -1,6 +1,6 @@
 <?php session_start();
 
-setcookie('login',"",1);
+setcookie('login',"",1,"/");
 setcookie('login',false);
 unset($_COOKIE['login']);
 $_SESSION['email'] = "";

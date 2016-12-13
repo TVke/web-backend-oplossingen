@@ -12,7 +12,7 @@ if(isset($_POST['login'])) {
 					$pass = hash("sha512",$_POST['password'].$dbPass['salt']);
 					if($pass === $dbPass['hashed_password']){
 						$mailHash = hash("sha512",$_SESSION['email'].$dbPass['salt']);
-						setcookie("login",$_SESSION['email'].",".$mailHash,time()+60*60*24*30);
+						setcookie("login",$_SESSION['email'].",".$mailHash,time()+60*60*24*30,"/");
 						header("Location: dashboard.php");
 					}else{
 						$_SESSION['notify'] = ['pass','Het wachtwoord was incorrect.'];

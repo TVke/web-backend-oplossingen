@@ -11,7 +11,7 @@ if (isset($_COOKIE['login'])){
 	require("../generalfooter.html");
 
 	session_unset();
-	setcookie('login', "", 1);
+	setcookie('login', "", 1,"/");
 	setcookie('login', false);
 	unset($_COOKIE['login']);
 }
