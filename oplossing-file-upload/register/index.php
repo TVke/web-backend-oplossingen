@@ -1,5 +1,5 @@
-<?php $titel = "CRUD-CMS";
-$ownStyle="../CMS.css";
+<?php $titel = "file-upload";
+$ownStyle="../file.css";
 
 session_start();
 

@@ -1,6 +1,6 @@
 <?php session_start();
-$titel="CRUD-CMS";
-$ownStyle = "../../CMS.css";
+$titel="file-upload";
+$ownStyle = "../../file.css";
 
 if(isset($_GET['artikel'])) {
 	try {

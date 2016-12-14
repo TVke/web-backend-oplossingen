@@ -27,5 +27,5 @@ if(isset($_POST['edit'])) {
 	}
 }else{
 	$_SESSION['notify'] = ['login','u moet eerst inloggen. '];
-	header("Location: ../login/");
+	header("Location: ../../login/");
 }

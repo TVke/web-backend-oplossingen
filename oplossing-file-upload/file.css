@@ -89,3 +89,8 @@ article a:hover{
 .non-active{
 	background: gainsboro;
 }
+form img{
+	width: 400px;
+	margin: 10px 0;
+	border: none;
+}
