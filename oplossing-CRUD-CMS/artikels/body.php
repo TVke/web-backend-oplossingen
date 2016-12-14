@@ -3,7 +3,7 @@
 </nav>
 <h3>Overzicht van de artikels</h3>
 <main>
-	<?= isset($_SESSION['notify'])?$_SESSION['notify'][1]:""?>
+	<?= isset($_SESSION['notify'])?"<span>".$_SESSION['notify'][1]."</span>":""?>
 	<a href="nieuw/">Voeg een artikel toe</a>
 	<?php if($articles):while ($article = $articles->fetch(PDO::FETCH_ASSOC)):if($article['is_archived']==0):?>
 	<article class="<?= ($article['is_active']==0)?"non-active":"active"?>">

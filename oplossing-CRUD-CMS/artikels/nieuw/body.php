@@ -3,7 +3,7 @@
 </nav>
 <h3>Artikel toevoegen</h3>
 <main>
-	<span><?= isset($_SESSION['notify'])?$_SESSION['notify'][1]:""?></span>
+	<?= isset($_SESSION['notify'])?"<span>".$_SESSION['notify'][1]."</span>":""?>
 	<form action="nieuw-artikel-proces.php" method="post">
 		<label for="articletitel">titel</label>
 		<input type="text" name="titel" id="articletitel" value="<?= isset($_SESSION['titel'])?$_SESSION['titel']:""?>">
