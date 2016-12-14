@@ -2,7 +2,7 @@
 
 if(isset($_POST['edit'])) {
 	try {
-		$db = new pdo('mysql:host=localhost;dbname=opdracht-security-login', 'root', 'root');
+		$db = new pdo('mysql:host=localhost;dbname=oplossing-file-upload', 'root', 'root');
 		if ($db) {
 			$date = explode("-",$_POST['datum']);
 			$datum = $date[2]."-".$date[1]."-".$date[0];

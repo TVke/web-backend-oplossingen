@@ -5,7 +5,7 @@ if(isset($_POST['register'])) {
 	$_SESSION['password'] = $_POST['password'];
 
 	try {
-		$db = new pdo('mysql:host=localhost;dbname=opdracht-security-login', 'root', 'root');
+		$db = new pdo('mysql:host=localhost;dbname=oplossing-file-upload', 'root', 'root');
 		if ($db) {
 			if (filter_var($_SESSION['email'], FILTER_VALIDATE_EMAIL)) {
 				$email = $db->query("SELECT * FROM users WHERE email= '".$_SESSION['email']."'");

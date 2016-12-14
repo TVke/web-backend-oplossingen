@@ -5,5 +5,6 @@
 <main>
 	<ul>
 		<li><a href="artikels/">artikels</a></li>
+		<li><a href="profiel/">profiel wijzigen</a></li>
 	</ul>
 </main>

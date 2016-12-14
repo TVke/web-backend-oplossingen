@@ -4,7 +4,7 @@ $ownStyle = "../../CMS.css";
 
 if(isset($_GET['artikel'])) {
 	try {
-		$db = new pdo('mysql:host=localhost;dbname=opdracht-security-login', 'root', 'root');
+		$db = new pdo('mysql:host=localhost;dbname=oplossing-file-upload', 'root', 'root');
 		if ($db) {
 			$newArticle = $db->prepare("UPDATE artikels SET is_archived = 1 WHERE id = :artikel");
 			$newArticle->bindParam(':artikel',$_GET['artikel']);
