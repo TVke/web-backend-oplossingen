@@ -2,7 +2,7 @@
 <main>
 	<a href="../"><< terug naar overzicht</a>
 	<?= isset($_SESSION['notify'])?"<p>".$_SESSION['notify']."</p>":""?>
-	<form action="verwerken.php" method="post">
+	<form action="confirm/" method="post">
 		<label for="title">titel</label>
 		<input type="text" id="title" name="titel"<?= isset($_SESSION['titel'])?" value=\"".$_SESSION['titel']."\"":""?>>
 		<label for="aticle">artikel</label>

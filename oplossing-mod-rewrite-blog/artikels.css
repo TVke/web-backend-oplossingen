@@ -22,3 +22,6 @@ article>p span::before{
 	position: absolute;
 	left:-8px;
 }
+body main:first-of-type{
+	margin: 30px auto 20px;
+}
