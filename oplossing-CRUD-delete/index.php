@@ -1,7 +1,7 @@
 <?php $titel = "CRUD-delete";
 $ownStyle = "delete.css";
 try {
-	$db = new pdo('mysql:host=localhost;dbname=bieren', 'root', 'root');
+	$db = new pdo('mysql:host=127.0.0.1;dbname=bieren', 'root', 'root');
 	if ($db) {
 		if (isset($_POST['delete'])){
 			$question = $_POST['delete'];

@@ -3,7 +3,7 @@
 if(isset($_POST)) {
 	if(isset($_POST['edit'])){
 		try {
-			$db = new pdo('mysql:host=localhost;dbname=oplossing-file-upload', 'root', 'root');
+			$db = new pdo('mysql:host=127.0.0.1;dbname=oplossing-file-upload', 'root', 'root');
 			if ($db) {
 				if($_FILES['foto']['error']===0){
 					if(($_FILES['foto']['type']==="image/jpeg"||$_FILES['foto']['type']==="image/png"||$_FILES['foto']['type']==="image/gif")&&$_FILES['foto']['size']<2000000){

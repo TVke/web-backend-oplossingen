@@ -6,7 +6,7 @@ if(isset($_POST['add'])) {
 	$_SESSION['keywords'] = $_POST['kernwoorden'];
 	$_SESSION['datum'] = $_POST['datum'];
 	try {
-		$db = new pdo('mysql:host=localhost;dbname=opdracht-security-login', 'root', 'root');
+		$db = new pdo('mysql:host=127.0.0.1;dbname=opdracht-security-login', 'root', 'root');
 		if ($db) {
 			$keywords = explode(",",$_SESSION['keywords']);
 			for ($i=0,$ilen=count($keywords);$i<$ilen;++$i){

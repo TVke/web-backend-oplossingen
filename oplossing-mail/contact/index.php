@@ -11,7 +11,7 @@ if($_POST['checkbox']===1){
 if(isset($_POST['send'])){
 	if(filter_var($_POST['email'],FILTER_VALIDATE_EMAIL)){
 		try {
-			$db = new pdo('mysql:host=localhost;dbname=contact_messages', 'root', 'root');
+			$db = new pdo('mysql:host=127.0.0.1;dbname=contact_messages', 'root', 'root');
 			if ($db) {
 				define('ADMIN','tvke91@gmail.com');
 				$newMail = $db->prepare("INSERT INTO mails (email,message) VALUES (:mail,:message)");

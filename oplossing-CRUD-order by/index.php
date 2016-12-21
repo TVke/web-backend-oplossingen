@@ -8,7 +8,7 @@ $soortA = true;
 $alcoholA = true;
 
 try {
-	$db = new pdo('mysql:host=localhost;dbname=bieren', 'root', 'root');
+	$db = new pdo('mysql:host=127.0.0.1;dbname=bieren', 'root', 'root');
 	if ($db) {
 		if (!isset($_GET['col'])){
 			$allBiers=$db->query("SELECT * FROM bieren bi JOIN brouwers br ON (bi.brouwernr = br.brouwernr) JOIN soorten s ON (bi.soortnr = s.soortnr)");

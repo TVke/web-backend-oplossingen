@@ -4,7 +4,7 @@ $ownStyle = "../../CMS.css";
 
 if(isset($_COOKIE['login'])) {
 	try {
-		$db = new pdo('mysql:host=localhost;dbname=opdracht-security-login', 'root', 'root');
+		$db = new pdo('mysql:host=127.0.0.1;dbname=opdracht-security-login', 'root', 'root');
 		if ($db) {
 			$cookiePart = explode(",", $_COOKIE['login']);
 			$getSalt = $db->query("SELECT salt FROM users WHERE email= '" . $cookiePart[0] . "'");

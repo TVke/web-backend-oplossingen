@@ -4,7 +4,7 @@ if(isset($_POST['login'])) {
 	$_SESSION['email'] = $_POST['mail'];
 
 	try {
-		$db = new pdo('mysql:host=localhost;dbname=opdracht-security-login', 'root', 'root');
+		$db = new pdo('mysql:host=127.0.0.1;dbname=opdracht-security-login', 'root', 'root');
 		if ($db) {
 				$email = $db->query("SELECT salt,hashed_password FROM users WHERE email= '".$_SESSION['email']."'");
 				$dbPass = $email->fetch(PDO::FETCH_ASSOC);

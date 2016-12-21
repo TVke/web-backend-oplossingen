@@ -4,7 +4,7 @@ $ownStyle = "../../CMS.css";
 
 if(isset($_GET['artikel'])) {
 	try {
-		$db = new pdo('mysql:host=localhost;dbname=opdracht-security-login', 'root', 'root');
+		$db = new pdo('mysql:host=127.0.0.1;dbname=opdracht-security-login', 'root', 'root');
 		if ($db) {
 			$newArticle = $db->prepare("UPDATE artikels SET is_active = IF(is_active=1, 0, 1) WHERE id = :artikel");
 			$newArticle->bindParam(':artikel',$_GET['artikel']);

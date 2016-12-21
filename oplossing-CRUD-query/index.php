@@ -1,10 +1,10 @@
 <?php $titel = "CRUD-query";
 try {
-	$db = new pdo('mysql:host=localhost;dbname=bieren', 'root', 'root');
+	$db = new pdo('mysql:host=127.0.0.1;dbname=bieren', 'root', 'root');
 	if ($db) {
 		$biers = $db->query("
-			SELECT bi.biernr,bi.naam,bi.alcohol,br.brnaam,br.adres,br.postcode,br.gemeente,br.omzet 
-			FROM bieren bi JOIN brouwers br ON(bi.brouwernr = br.brouwernr) 
+			SELECT bi.biernr,bi.naam,bi.alcohol,br.brnaam,br.adres,br.postcode,br.gemeente,br.omzet
+			FROM bieren bi JOIN brouwers br ON(bi.brouwernr = br.brouwernr)
 			WHERE bi.naam LIKE 'du%' AND br.brnaam LIKE '%a%'
 		");
 		$brouwers = $db->query("SELECT brouwernr,brnaam FROM brouwers");

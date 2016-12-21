@@ -1,6 +1,6 @@
 <?php $titel = "CRUD-insert";
 try {
-	$db = new pdo('mysql:host=localhost;dbname=bieren', 'root', 'root');
+	$db = new pdo('mysql:host=127.0.0.1;dbname=bieren', 'root', 'root');
 	if ($db) {
 		if(isset($_POST['submit'])) {
 			$newBrewer = $db->prepare("INSERT INTO brouwers VALUES (NULL,:brnaam,:adres,:postcode,:gemeente,:omzet)");

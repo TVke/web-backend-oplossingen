@@ -5,7 +5,7 @@ if(isset($_POST['register'])) {
 	$_SESSION['password'] = $_POST['password'];
 
 	try {
-		$db = new pdo('mysql:host=localhost;dbname=opdracht-security-login', 'root', 'root');
+		$db = new pdo('mysql:host=127.0.0.1;dbname=opdracht-security-login', 'root', 'root');
 		if ($db) {
 			if (filter_var($_SESSION['email'], FILTER_VALIDATE_EMAIL)) {
 				$email = $db->query("SELECT * FROM users WHERE email= '".$_SESSION['email']."'");
@@ -43,4 +43,3 @@ if(isset($_POST['register'])) {
 	$_SESSION['notify'] = ['login','u moet eerst inloggen. '];
 	header("Location: login.php");
 }
-
