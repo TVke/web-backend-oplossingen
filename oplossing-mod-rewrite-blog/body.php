@@ -1,6 +1,6 @@
 <main>
 	<?= isset($_GET['articles'])||isset($_GET['year'])?"<a href='clean/'><< terug naar overzicht</a>":""?>
-	<form action="." method="get">
+	<form action="cleunup/" method="get">
 		<label for="article">Zoeken in de artikels:</label>
 		<input type="search" id="article" name="articles"<?= isset($_GET['articles'])?" value='".$_GET['articles']."'":""?>>
 		<label for="date">Zoeken in de datum:</label>

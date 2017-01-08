@@ -10,18 +10,6 @@ article{
 	display: block;
 	margin: 10px 0;
 }
-article>p span{
-	position: relative;
-	padding-right:3px;
-}
-article>p span:first-child::before{
-	content: "";
-}
-article>p span::before{
-	content: ",";
-	position: absolute;
-	left:-8px;
-}
 body main:first-of-type{
 	margin: 30px auto 20px;
 }

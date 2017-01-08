@@ -1,0 +1,299 @@
+/* Variables */
+@import "variables";
+
+*,html{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	font-family: $base-font;
+	font-size: 1em;
+}
+
+header{
+	background: $neut-color;
+	display: flex;
+	border-bottom: 1px solid darken($neut-color,10%);
+	align-items: baseline;
+	padding-right: 20px;
+
+	h1 a{
+		@include link-reset();
+		font-weight: 200;
+		font-size: .8em;
+		padding: 15px 20px;
+		color: darken($prim-color,5%);
+
+		&:hover{
+			color: $prim-color;
+		}
+	}
+}
+
+nav{
+	display: flex;
+	justify-content: space-between;
+	flex: 1;
+
+	ul{
+		list-style: none;
+		display: flex;
+
+		.active a{
+			color: black;
+			border-bottom: 2px solid $prim-color;
+		}
+	}
+
+	#login{
+		display: flex;
+		margin-left: auto;
+
+		#user{
+			@include link-look();
+			color: black;
+		}
+	}
+}
+
+nav ul li a,nav #login li input{
+	@include link-look();
+	cursor: pointer;
+	color: lighten(black,40%);
+
+	&:hover{
+		color: black;
+	}
+}
+/* main content */
+main{
+	padding: 20px;
+
+	a.back{
+		display: block;
+		max-width: 1000px;
+		width: 100%;
+		margin: 0 auto 15px;
+		color: $prim-color;
+		text-decoration: none;
+		padding-left: 10px;
+		transition: all 5ms ease;
+		&:hover{
+			padding-left: 0;
+		}
+		&::before{
+			content: '⬅︎ ';
+		}
+	}
+
+	section{
+		max-width: 1000px;
+		width: 100%;
+		margin: 0 auto;
+		border: 1px solid darken($neut-color,10%);
+		border-bottom-width: 2px;
+		border-radius: 3px;
+		position: relative;
+		h2{
+			padding: 6px 12px;
+			font-weight: normal;
+			font-size: 1.1em;
+			background: linear-gradient(lighten($neut-color,2%),$neut-color);
+			border-radius: 3px 3px 0 0;
+			color: lighten(black,5%);
+		}
+		/* delete button */
+		a.button{
+			@include button-look(red);
+			margin: 4px;
+			font-size: .8em;
+			text-decoration: none;
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+		/* notifications */
+		.error{
+			@include message(red);
+			ul{
+				padding-left: 20px;
+			}
+		}
+		.success{
+			@include message(limegreen);
+		}
+		.confirm{
+			@include message(orange);
+			form{
+				padding: 0;
+				input[type=submit]{
+					@include button-look(red);
+					float: left;
+					margin: 10px 0 7px;
+				}
+			}
+			a{
+				@include button-look(gray);
+				float: left;
+				margin: 10px 10px 7px;
+				text-decoration: none;
+			}
+			&::after{
+				content: "";
+				display: block;
+				clear: both;
+			}
+		}
+		form{
+			line-height: 150%;
+			label.login{
+				float: left;
+			}
+			label.has-error{
+				color: darken(red,5%);
+			}
+			a.login{
+				padding: 0 25px;
+			}
+			input{
+				padding: 5px 10px;
+				font-size: inherit;
+				width: calc(100% - (2 * 12px));
+				margin-bottom: 15px;
+				&.has-error{
+					border:1px solid darken(red,5%);
+					outline-color: darken(red,5%);
+				}
+				&[type=submit]{
+					@include button-look($prim-color);
+					margin: 20px 0 10px;
+					width: initial;
+					&:disabled{
+						background: $neut-color;
+
+						&:hover{
+							color: gray;
+						}
+					}
+				}
+				&[type=checkbox]{
+					width: initial;
+					float: left;
+					margin: 6px 8px 6px 0;
+				}
+			}
+			textarea{
+				padding: 5px 10px;
+				font-size: inherit;
+				max-width: calc(100% - (2 * 12px));
+				width: calc(100% - (2 * 12px));
+				min-height: 90px;
+				border: 1px solid silver;
+				&.has-error{
+					border:1px solid darken(red,5%);
+					outline-color: darken(red,5%);
+				}
+			}
+		}
+		p,form{
+			padding: 15px 20px;
+		}
+		p,label, input{
+			display: block;
+		}
+
+		article:first-of-type{
+			padding-top: 20px;
+		}
+		article{
+			display: flex;
+			padding: 5px 20px;
+			div.voting{
+				display: flex;
+				flex-wrap: wrap;
+				width: 30px;
+				margin-right: 5px;
+				form{
+					display: flex;
+					padding: 0;
+					input[type=image]{
+						width:10px;
+						margin: auto 0;
+						&:disabled{
+							cursor:  default;
+						}
+					}
+				}
+				img{
+					width:10px;
+					margin: auto 0;
+					padding: 5px 10px;
+				}
+			}
+			div:last-child{
+				flex: 1;
+				*{
+					a{
+						text-decoration: none;
+						color: darken($comp-color,15%);
+						font-weight: normal;
+						&:hover{
+							color: darken($comp-color,25%);
+							text-decoration: underline;
+						}
+					}
+				}
+				h3{
+					display: flex;
+					a:first-child{
+						font-size: 1.5em;
+					}
+				}
+				a.button{
+					@include button-look($prim-color);
+					position: static;
+					margin: 0 15px;
+					align-self: center;
+				}
+				sup{
+					line-height: 150%;
+					span{
+						color: gray;
+					}
+				}
+			}
+		}
+		article:last-of-type{
+			padding-bottom: 25px;
+		}
+		ul.comments{
+			margin: 0 10%;
+			li{
+				margin: 20px 0;
+				h4{
+					font-weight: normal;
+				}
+				hr{
+					border: none;
+					background: gainsboro;
+					height: 1px;
+					margin: 7px 0 5px;
+				}
+				sup{
+					font-size: .7em;
+					a.button{
+						@include button-look($prim-color);
+						position: static;
+						margin: 0;
+						font-size: 1em;
+						//align-self: center;
+						&.delete{
+							@include button-look(red);
+						}
+					}
+				}
+			}
+		}
+	}
+}

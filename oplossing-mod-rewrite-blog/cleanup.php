@@ -1,0 +1,2 @@
+<?php
+vardump($_GET['']);

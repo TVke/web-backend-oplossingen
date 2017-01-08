@@ -1,2 +1,4 @@
 RewriteEngine On
 RewriteRule clean/ clean.php
+RewriteRule cleanup/ cleanup.php
+#RewriteRule ^([^/]+)/([^/]+)/?$ index.php?articles=$1&year=$2

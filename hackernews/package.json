@@ -1,0 +1,10 @@
+{
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.18.5",
+    "gulp": "^3.9.1",
+    "gulp-image": "^2.7.2",
+    "gulp-sass": "^3.0.0"
+  }
+}

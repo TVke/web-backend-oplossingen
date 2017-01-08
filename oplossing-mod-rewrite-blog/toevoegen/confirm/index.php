@@ -36,17 +36,17 @@ if (isset($_POST['add'])){
 				unset($_SESSION['kernwoorden']);
 				unset($_SESSION['datum']);
 				$_SESSION['notify'] = "Het toevoegen is gelukt. ";
-				header("Location: ../");
+				header("Location: ../../");
 			}else{
 				$_SESSION['notify'] = "Het toevoegen is mislukt. ";
-				header("Location: .");
+				header("Location: ../");
 			}
 		}else{
 			throw new Exception("Het toevoegen is mislukt. ");
 		}
 	}catch (Exception $m){
 		$_SESSION['notify'] = $m;
-		header("Location: .");
+		header("Location: ../");
 	}
 }else{
 	$_SESSION['titel']="";
@@ -54,5 +54,5 @@ if (isset($_POST['add'])){
 	$_SESSION['kernwoorden']="";
 	$_SESSION['datum']="";
 	unset($_SESSION['notify']);
-	header("Location: ../");
+	header("Location: ../../");
 }
