@@ -1,7 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-	<a class="back" href="{{ route('comment_overview',['article'=>$comment->article->id]) }}">back</a>
+	<section class="back">
+		<a href="{{ route('comment_overview',['article'=>$comment->article->id]) }}">back</a>
+	</section>
 	<section>
 		<h2>edit comment</h2>
 		<a class="button" href="{{ route('comment_edit_confirm',['comment'=>$comment->id]) }}">delete comment</a>
@@ -10,7 +12,7 @@
 			{{ csrf_field() }}
 			{{ method_field("patch") }}
 			<label for="commentContent"{{ $errors->has('comment') ? 'class=has-error ' : '' }}>comment</label>
-			<textarea {{ $errors->has('comment') ? 'class=has-error ' : '' }}id="commentContent" name="comment" required>{{ $comment->comment or old('comment') }}</textarea>
+			<textarea {{ $errors->has('comment') ? 'class=has-error ' : '' }}id="commentContent" name="comment" maxlength="255" required>{{ $comment->comment or old('comment') }}</textarea>
 			<input type="submit" value="edit comment">
 		</form>
 	</section>

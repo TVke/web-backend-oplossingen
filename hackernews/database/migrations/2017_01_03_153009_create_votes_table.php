@@ -22,10 +22,14 @@ class CreateVotesTable extends Migration
 
             $table->foreign('user_id')
 	            ->references('id')
-	            ->on('users');
+	            ->on('users')
+	            ->onUpdate('cascade')
+	            ->onDelete('cascade');
 	        $table->foreign('article_id')
 		        ->references('id')
-		        ->on('articles');
+		        ->on('articles')
+		        ->onUpdate('cascade')
+		        ->onDelete('cascade');
         });
     }
 

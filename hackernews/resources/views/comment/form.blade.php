@@ -1,7 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-	<a class="back" href="{{ route('article_overview') }}">back</a>
+	<section class="back">
+		<a href="{{ route('article_overview') }}">back</a>
+	</section>
 	<section>
 		<h2>articles</h2>
 		@if(isset($toDelete))
@@ -31,7 +33,7 @@
 			{{ csrf_field() }}
 			{{ method_field("put") }}
 			<label for="commentContent"{{ $errors->has('comment') ? 'class=has-error ' : '' }}>comment</label>
-			<textarea name="comment" {{ $errors->has('comment') ? 'class=has-error ' : '' }}id="commentContent" required>{{ old('comment') }}</textarea>
+			<textarea name="comment" {{ $errors->has('comment') ? 'class=has-error ' : '' }}id="commentContent" maxlength="255" required>{{ old('comment') }}</textarea>
 			<input type="submit" value="add comment">
 		</form>
 	@endif

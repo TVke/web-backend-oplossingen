@@ -1,6 +1,7 @@
 'use strict';
 const gulp = require('gulp');
 const sass = require('gulp-sass');
+var autoprefixer = require('gulp-autoprefixer');
 const browserSync = require('browser-sync').create();
 const image = require('gulp-image');
 
@@ -15,6 +16,7 @@ gulp.task('watch', ['sass:watch']);
 gulp.task('sass', function () {
 	return gulp.src('resources/assets/sass/*.scss')
 		.pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+		.pipe(autoprefixer())
 		.pipe(gulp.dest('public/css'));
 });
 gulp.task('sass:watch', function () {

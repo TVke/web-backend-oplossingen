@@ -1,7 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-	<a class="back" href="{{ route('article_overview') }}">back</a>
+	<section class="back">
+		<a href="{{ route('article_overview') }}">back</a>
+	</section>
 	<section>
 		<h2>{{ Request::segment(1) ==='new'?'new':'edit'}} article</h2>
 		@unless(Request::segment(1) === 'new')

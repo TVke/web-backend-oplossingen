@@ -24,7 +24,7 @@ class CommentController extends Controller
 	public function add(Request $request, Articles $article)
 	{
 		$this->validate($request,[
-			'comment'=> ['required']
+			'comment'=> ['required','string','max:400']
 		]);
 		$comment = new Comment($request->all());
 		$comment->article()->associate($article);
@@ -48,7 +48,7 @@ class CommentController extends Controller
 	{
 		if($comment->user_id===Auth::id()){
 			$this->validate($request,[
-				'comment'=> ['required']
+				'comment'=> ['required','string','max:400']
 			]);
 			$comment->update($request->all());
 			session()->flash('success', trans('hackernews.comment.edit'));

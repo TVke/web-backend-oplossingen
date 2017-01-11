@@ -70,20 +70,21 @@ nav ul li a,nav #login li input{
 main{
 	padding: 20px;
 
-	a.back{
-		display: block;
-		max-width: 1000px;
-		width: 100%;
-		margin: 0 auto 15px;
-		color: $prim-color;
-		text-decoration: none;
-		padding-left: 10px;
-		transition: all 5ms ease;
-		&:hover{
-			padding-left: 0;
-		}
-		&::before{
-			content: '⬅︎ ';
+	section.back{
+		border: none;
+		margin-bottom: 15px;
+		a{
+			color: $prim-color;
+			text-decoration: none;
+			padding-left: 10px;
+			transition: all 5ms ease;
+			&:hover{
+				padding-left: 0;
+				padding-right: 10px;
+			}
+			&::before{
+				content: '⬅︎ ';
+			}
 		}
 	}
 
@@ -129,6 +130,7 @@ main{
 				padding: 0;
 				input[type=submit]{
 					@include button-look(red);
+					cursor: pointer;
 					float: left;
 					margin: 10px 0 7px;
 				}
@@ -167,6 +169,7 @@ main{
 				}
 				&[type=submit]{
 					@include button-look($prim-color);
+					cursor: pointer;
 					margin: 20px 0 10px;
 					width: initial;
 					&:disabled{
@@ -209,6 +212,7 @@ main{
 		article{
 			display: flex;
 			padding: 5px 20px;
+			max-height: 58px;
 			div.voting{
 				display: flex;
 				flex-wrap: wrap;
@@ -220,6 +224,7 @@ main{
 					input[type=image]{
 						width:10px;
 						margin: auto 0;
+						max-height: 15px;
 						&:disabled{
 							cursor:  default;
 						}
@@ -229,6 +234,7 @@ main{
 					width:10px;
 					margin: auto 0;
 					padding: 5px 10px;
+					max-height: 15px;
 				}
 			}
 			div:last-child{
@@ -273,6 +279,9 @@ main{
 				margin: 20px 0;
 				h4{
 					font-weight: normal;
+					max-width: 800px;
+					overflow: auto;
+					word-break: break-all;
 				}
 				hr{
 					border: none;

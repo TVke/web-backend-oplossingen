@@ -22,7 +22,11 @@
 		<form action="{{ $delete }}" method="post">
 			{{ csrf_field() }}
 			{{ method_field('delete') }}
-			<input type="submit" value="delete article">
+			@if(isset($comment))
+				<input type="submit" value="delete comment">
+			@else
+				<input type="submit" value="delete article">
+			@endif
 		</form>
 		<a href="{{ $cancel }}">cancel</a>
 	</div>

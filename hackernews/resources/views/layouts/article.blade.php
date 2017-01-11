@@ -1,22 +1,22 @@
 <article>
 	<div class="voting">
 		@unless(Auth::guest()||Auth::id()===$article->user_id) {{-- own articles --}}
-			@if($article->load('votes')->votes->where('user_id',Auth::id())->count()===0) {{-- no vote by current user --}}
-			@php
-				$up_dis = 'disable';
-				$down_dis = 'disable';
-			@endphp
+		@if($article->load('votes')->votes->where('user_id',Auth::id())->count()===0) {{-- no vote by current user --}}
+		@php
+			$up_dis = 'disable';
+			$down_dis = 'disable';
+		@endphp
+		@else
+			@if($article->load('votes')->votes->where('up',0)->count()===0)
+				@php
+					$down_dis = 'disable';
+				@endphp
 			@else
-				@if($article->load('votes')->votes->where('up',0)->count()===0)
-					@php
-						$down_dis = 'disable';
-					@endphp
-				@else
-					@php
-						$up_dis = 'disable';
-					@endphp
-				@endif
+				@php
+					$up_dis = 'disable';
+				@endphp
 			@endif
+		@endif
 		@endunless
 		@if(isset($up_dis))
 			<form action="{{ route('vote_up',['article'=>$article->id]) }}" method="post">
@@ -26,7 +26,11 @@
 			</form>
 
 		@elseif(Auth::guest()||Auth::id()===$article->user_id)
-			<img src="/img/up-dis.svg" alt="up arrow" title="{{ trans('hackernews.vote.error.access') }}">
+			@if(Auth::guest())
+				<img src="/img/up-dis.svg" alt="up arrow" title="{{ trans('hackernews.vote.error.login') }}">
+			@else
+				<img src="/img/up-dis.svg" alt="up arrow" title="{{ trans('hackernews.vote.error.access') }}">
+			@endif
 		@else
 			<img src="/img/up-dis.svg" alt="up arrow" title="{{ trans('hackernews.vote.error.up') }}">
 		@endif
@@ -37,7 +41,11 @@
 				<input type="image" src="/img/down.svg" aria-label="down arrow">
 			</form>
 		@elseif(Auth::guest()||Auth::id()===$article->user_id)
-			<img src="/img/down-dis.svg" alt="down arrow" title="{{ trans('hackernews.vote.error.access') }}">
+			@if(Auth::guest())
+				<img src="/img/down-dis.svg" alt="down arrow" title="{{ trans('hackernews.vote.error.login') }}">
+			@else
+				<img src="/img/down-dis.svg" alt="down arrow" title="{{ trans('hackernews.vote.error.access') }}">
+			@endif
 		@else
 			<img src="/img/down-dis.svg" alt="down arrow" title="{{ trans('hackernews.vote.error.down') }}">
 		@endif

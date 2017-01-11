@@ -15,7 +15,7 @@ class ArticleController extends Controller
 
 	public function index()
 	{
-		$sortedByComments = Articles::with('author','comments','votes')->latest()->get()->sortBy(function($articles){
+		$sortedByComments = Articles::with('author','comments','votes')->latest()->get()->sortByDesc(function($articles){
 			return $articles->comments->count();
 		});
 		$sortByVotes = $sortedByComments->sortByDesc(function($articles){
@@ -33,7 +33,7 @@ class ArticleController extends Controller
 	public function add(Request $request)
 	{
 		$this->validate($request,[
-			'title'=> ['required','max:255'],
+			'title'=> ['required','max:255','string'],
 			'url'=>['required','url','active_url']
 		]);
 		$article = new Articles($request->all());
@@ -56,7 +56,7 @@ class ArticleController extends Controller
 	{
 		if($article->user_id===Auth::id()){
 			$this->validate($request,[
-				'title' => ['required','max:255'],
+				'title' => ['required','max:255','string'],
 				'url' => ['required','url','active_url']
 			]);
 			$article->update($request->all());

@@ -27,6 +27,7 @@ return [
 		'up'=>'you have upvoted &quot;:title&quot;',
 		'down'=>'you have downvoted &quot;:title&quot;',
 		'error'=>[
+			'login'=>'You need to be logged in to vote',
 			'access'=>'You can\'t vote on an article that is yours',
 			'up'=>'You can only upvote once',
 			'down'=>'You can only downvote once'
