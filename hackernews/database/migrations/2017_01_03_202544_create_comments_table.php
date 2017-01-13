@@ -18,6 +18,7 @@ class CreateCommentsTable extends Migration
             $table->string('comment',400);
             $table->integer('user_id')->unsigned();
             $table->integer('article_id')->unsigned();
+            $table->boolean('deleted')->default(0);
             $table->timestamps();
 
 	        $table->foreign('user_id')

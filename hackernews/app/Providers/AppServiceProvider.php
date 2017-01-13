@@ -13,7 +13,14 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+	    /*Validator::extend('trim', function ($attribute, $value, $parameters, $validator) {
+	    	if(mb_detect_encoding($value)){
+
+		    }else{
+
+		    }
+		    return $value == 'foo';
+	    });*/
     }
 
     /**

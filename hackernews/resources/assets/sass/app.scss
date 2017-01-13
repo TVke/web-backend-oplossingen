@@ -212,7 +212,6 @@ main{
 		article{
 			display: flex;
 			padding: 5px 20px;
-			max-height: 58px;
 			div.voting{
 				display: flex;
 				flex-wrap: wrap;
@@ -275,6 +274,7 @@ main{
 		}
 		ul.comments{
 			margin: 0 10%;
+			list-style: none;
 			li{
 				margin: 20px 0;
 				h4{

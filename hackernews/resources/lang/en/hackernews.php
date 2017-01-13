@@ -8,8 +8,9 @@ return [
 		'confirm'=>'Are you sure you want to delete this article?',
 		'delete'=>'article &quot;:title&quot; was deleted succesfully',
 		'error'=>[
-			'edit'=>'You can\'t edit an article that is not yours',
-			'delete'=>'You can\'t delete an article that is not yours'
+			'emoticons'=>'You can\'t use emoticons inside an article title',
+			'edit'=>'You can\'t edit an article that is not yours or is deleted',
+			'delete'=>'You can\'t delete an article that is not yours or is deleted'
 		]
 	],
 	'comment'=>[
@@ -19,8 +20,9 @@ return [
 		'confirm'=>'Are you sure you want to delete this comment?',
 		'delete'=>'your comment was deleted succesfully',
 		'error'=>[
-			'edit'=>'You can\'t edit a comment that is not yours',
-			'delete'=>'You can\'t delete a comment that is not yours'
+			'emoticons'=>'You can\'t use emoticons inside a comment',
+			'edit'=>'You can\'t edit a comment that is not yours or is deleted',
+			'delete'=>'You can\'t delete a comment that is not yours or is deleted'
 		]
 	],
 	'vote'=>[
